@@ -203,9 +203,7 @@ function App() {
     setLoading(true);
 
     try {
-      const response = await fetch(
-        `/api/itunes?term=${encodeURIComponent(query)}&media=music&entity=song&limit=50&country=IN`
-      );
+      const response = await fetch(`https://itunes.apple.com/search?term=${encodeURIComponent(query)}&media=music&entity=song&limit=50&country=IN`);
 
       if (!response.ok) {
         throw new Error(`Search failed: ${response.status}`);
