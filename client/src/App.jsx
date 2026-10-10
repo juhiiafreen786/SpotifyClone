@@ -229,7 +229,7 @@ function App() {
           image:
             song.artworkUrl100 ||
             "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=500",
-          audio: `/api/itunes-audio?url=${encodeURIComponent(song.previewUrl)}`,
+          audio: song.previewUrl,
           album: song.collectionName || "Unknown Album",
           storeUrl: song.trackViewUrl,
         }));
